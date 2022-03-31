@@ -1,0 +1,103 @@
+<html>
+
+    <head>
+        <meta name="viewport" content="width-device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Play&display=swap" rel="stylesheet">
+
+        <title>X-Ray Status Detector (A.I. solution)</title>
+
+        <!--<meta name="theme-color" content="">-->
+        <style>
+        body{
+            background-image:url("https://c4.wallpaperflare.com/wallpaper/892/593/211/medicine-separated-shoulder-collar-bone-wallpaper-preview.jpg");
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size:100% 100%;
+            background-position:center;
+        }
+
+        #footer {
+            position: fixed;
+            padding: 10px 10px 0px 10px;
+            bottom: 0;
+            width: 100%;
+            /* Height of the footer*/
+            height: 90px;
+            background-color:back;
+
+
+        }
+    </style>
+
+
+    </head>
+
+<body>
+
+    <div class="very_main">
+
+        <header>
+            <div class="top_frame" style="font-size:30px">
+                <h1 style="color:white">A.I. based X-Ray analysis for human lungs</h1>
+            </div>
+        </header>
+        <br>
+        <br>
+        <br>
+
+        {% extends "base.html" %} {% block content %}
+
+        <p class="description" style="font-size:25px; color:black">
+            Choose your X-Ray visual file and click Predict to get your diagnosis.
+        </p>
+
+
+        <div>
+            <form id="upload-file" method="post" enctype="multipart/form-data">
+                <label for="imageUpload" class="upload-label">
+                    Select your X-Ray Visual
+                </label>
+                <input type="file" name="file" id="imageUpload" accept=".png, .jpg, .jpeg">
+            </form>
+
+            <div class="image-section" style="display:none;">
+                <div class="img-preview">
+                    <div id="imagePreview">
+                    </div>
+                </div>
+                <div>
+                    <button type="button" class="upload-label" id="btn-predict">Predict!</button>
+                </div>
+            </div>
+
+            <div class="loader" style="display:none;"></div>
+
+            <h1 style="color:red;" id="result">
+                <span> </span>
+            </h1>
+
+        </div>
+
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="footer">
+            <p style="font-size:25px">@ Created by
+            <a href="" target="_blank" style="color:red">Shivam Chhetry</a>
+
+                Connect me on <a href="" target="_blank" style="color:red"> LinkedIN</a>
+            </p>
+        </div>
+
+
+    </div>
+
+    {% endblock %}
+
+</body>
+
+</html>

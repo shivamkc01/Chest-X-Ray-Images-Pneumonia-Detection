@@ -3,7 +3,6 @@
 # Flask utils
 from flask import Flask, redirect, url_for, request, render_template
 from werkzeug.utils import secure_filename
-from gevent.pywsgi import WSGIServer
 
 # Import Keras dependencies
 from tensorflow.keras.models import model_from_json
@@ -13,9 +12,6 @@ from keras.preprocessing import image
 
 # Import other dependecies
 import numpy as np
-import h5py
-from PIL import Image
-import PIL
 import os
 
 #::: Flask App Engine :::
